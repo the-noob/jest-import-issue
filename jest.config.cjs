@@ -21,7 +21,7 @@ if (vers[0] < 14) {
 }
 
 module.exports = {
-  setupFilesAfterEnv: ["./utils/jestSetup.js"],
+  setupFilesAfterEnv: ["./utils/jestSetup.cjs"],
   resetMocks: true,
   verbose: true,
   testEnvironment: "node",

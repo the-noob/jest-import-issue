@@ -9,10 +9,11 @@
     "node": ">=14.9.0",
     "yarn": ">=1.3.0"
   },
+  "type": "module",
   "scripts": {
     "preinstall": "echo '\n\nPlease make sure you are using YARN instead of NPM\n\n'",
     "start:internal-api": "cross-env NODE_CONFIG_DIR=./config nodemon --trace-warnings --watch ./packages/internal-api/ ./packages/internal-api/src/server.js",
-    "jest": "jest",
+    "jest": "NODE_OPTIONS='--experimental-vm-modules' jest",
     "clear-all": "rimraf ./packages/*/node_modules && rimraf ./node_modules"
   },
   "lint-staged": {
