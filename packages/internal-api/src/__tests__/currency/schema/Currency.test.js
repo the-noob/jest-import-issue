@@ -1,8 +1,10 @@
 import { graphql } from "graphql";
 import { basename } from "path";
+import { fileURLToPath } from "url";
 
 import schema from "../../../schema";
 
+const __filename = fileURLToPath(import.meta.url); // eslint-disable-line no-underscore-dangle
 const entity = basename(__filename, ".test.js");
 
 /* eslint-disable no-underscore-dangle */
